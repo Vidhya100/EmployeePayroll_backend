@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Text;
 
 namespace ModelLayer.Service
@@ -12,7 +13,7 @@ namespace ModelLayer.Service
         public string ProfileImg { get; set; }
         public string Gender { get; set; }
         public string Department { get; set; }
-        public double Salary { get; set; }
+        public float Salary { get; set; }
         public DateTime StartDate { get; set; }
         public string Notes { get; set; }
     }
