@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "jeA3ynN0CD+nwG36mM9uF3cQZhVFwzw/Iwqnui8KU2xi9QnzN4Q/2szvXJGn0fNpQvnukxY/qzgpl3cBfKahCQ==",
+  "success": true,
+  "projectFilePath": "E:\\MVC\\EmployeePayroll_backend\\BusinessLayer\\BusinessLayer.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\world\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\7.0.0\\microsoft.extensions.configuration.abstractions.7.0.0.nupkg.sha512",
+    "C:\\Users\\world\\.nuget\\packages\\microsoft.extensions.primitives\\7.0.0\\microsoft.extensions.primitives.7.0.0.nupkg.sha512",
+    "C:\\Users\\world\\.nuget\\packages\\system.memory\\4.5.5\\system.memory.4.5.5.nupkg.sha512",
+    "C:\\Users\\world\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\6.0.0\\system.runtime.compilerservices.unsafe.6.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}

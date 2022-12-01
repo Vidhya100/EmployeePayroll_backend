@@ -1,0 +1,31 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "6c2ea8c9-8402-4fc6-aacb-93cb63dccd8d": {
+      "ProjectGuid": "6c2ea8c9-8402-4fc6-aacb-93cb63dccd8d",
+      "DisplayName": "EmployeePayrolMVC",
+      "ColorIndex": 0
+    },
+    "a19ed9fd-23bf-4219-8b9b-5100155a1678": {
+      "ProjectGuid": "a19ed9fd-23bf-4219-8b9b-5100155a1678",
+      "DisplayName": "RepositoryLayer",
+      "ColorIndex": 1
+    },
+    "c1e2bf26-40f1-4b2b-a34d-ecaedb7a2500": {
+      "ProjectGuid": "c1e2bf26-40f1-4b2b-a34d-ecaedb7a2500",
+      "DisplayName": "CommonLayer",
+      "ColorIndex": 2
+    },
+    "78bc618e-9125-4e60-bf3c-8548462b9b46": {
+      "ProjectGuid": "78bc618e-9125-4e60-bf3c-8548462b9b46",
+      "DisplayName": "BusinessLayer",
+      "ColorIndex": 3
+    },
+    "81816c4f-055d-4917-a1fc-1187530481e5": {
+      "ProjectGuid": "81816c4f-055d-4917-a1fc-1187530481e5",
+      "DisplayName": "ModelLayer",
+      "ColorIndex": 4
+    }
+  },
+  "NextColorIndex": 5
+}
