@@ -5,6 +5,7 @@
 }
 
 <h1>AddEmployee</h1>
+<link rel="stylesheet" href="~/css/Edit.css" />
 
 <h4>EmpModel</h4>
 <hr />
@@ -52,7 +53,7 @@
                 <input asp-for="Notes" class="form-control" />
                 <span asp-validation-for="Notes" class="text-danger"></span>
             </div>
-            <div class="form-group">
+            <div class="form-group save-btn">
                 <input type="submit" value="Create" class="btn btn-primary" />
             </div>
         </form>
@@ -60,7 +61,7 @@
 </div>
 
 <div>
-    <a asp-action="Index">Back to List</a>
+    <a asp-action="GetAllEmployees">Back to List</a>
 </div>
 
 @section Scripts {
