@@ -6,7 +6,7 @@ using System.Text;
 
 namespace BusinessLayer.Service
 {
-    public class UserBL
+    public class UserBL : IUserBL
     {
         private readonly IUserRL iuserRL;
 

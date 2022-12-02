@@ -41,7 +41,8 @@ End
 
 /*for update employee Details*/ 
 Create procedure spUpdateEmployee          
-(          
+(    
+	@EmpID int,     
    @EmpName varchar(255) ,
 	@ProfileImg varchar(255),
 	@Gender varchar(20),
@@ -61,7 +62,7 @@ begin
    Salary=@Salary,
    StartDate=@StartDate,
    Notes=@Notes
-   where EmpID=@EmpID          
+   where EmpID=@EmpID      
 End 
 
 /*for delete employee Details*/ 
