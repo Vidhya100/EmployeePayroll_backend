@@ -107,7 +107,7 @@ namespace RepositoryLayer.Service
                 EmpModel empModel = new EmpModel();
                 using (SqlConnection con = new SqlConnection(this.iconfiguration.GetConnectionString("EmployeeDBMVC")))
                 {
-                    string sqlQuery = "SELECT * FROM tblEmployee WHERE EmployeeID= " + id;
+                    string sqlQuery = "SELECT * FROM EmpDetails WHERE EmpID= " + id;
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
 
                     con.Open();
