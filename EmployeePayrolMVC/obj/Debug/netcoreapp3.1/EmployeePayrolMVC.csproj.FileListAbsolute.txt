@@ -140,3 +140,4 @@ E:\MVC\EmployeePayroll_backend\EmployeePayrolMVC\obj\Debug\netcoreapp3.1\Employe
 E:\MVC\EmployeePayroll_backend\EmployeePayrolMVC\obj\Debug\netcoreapp3.1\EmployeePayrolMVC.pdb
 E:\MVC\EmployeePayroll_backend\EmployeePayrolMVC\obj\Debug\netcoreapp3.1\EmployeePayrolMVC.genruntimeconfig.cache
 E:\MVC\EmployeePayroll_backend\EmployeePayrolMVC\obj\Debug\netcoreapp3.1\Razor\Views\Emp\GetAllEmployees.cshtml.g.cs
+E:\MVC\EmployeePayroll_backend\EmployeePayrolMVC\obj\Debug\netcoreapp3.1\Razor\Views\Emp\AddEmployee.cshtml.g.cs

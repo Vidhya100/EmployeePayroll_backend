@@ -24,7 +24,7 @@ namespace RepositoryLayer.Service
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(iconfiguration["EmployeeDBMVC"]))
+                using (SqlConnection con = new SqlConnection(this.iconfiguration.GetConnectionString("EmployeeDBMVC")))
                 {
                     SqlCommand cmd = new SqlCommand("spAddEmp", con);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -65,7 +65,7 @@ namespace RepositoryLayer.Service
             {
                 List<EmpModel> lstemployee = new List<EmpModel>();
 
-                using (SqlConnection con = new SqlConnection(iconfiguration["EmployeeDBMVC"]))
+                using (SqlConnection con = new SqlConnection(this.iconfiguration.GetConnectionString("EmployeeDBMVC")))
                 {
                     SqlCommand cmd = new SqlCommand("spGetAllEmployees", con);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -105,7 +105,7 @@ namespace RepositoryLayer.Service
             try
             {
                 EmpModel empModel = new EmpModel();
-                using (SqlConnection con = new SqlConnection(iconfiguration["EmployeeDBMVC"]))
+                using (SqlConnection con = new SqlConnection(this.iconfiguration.GetConnectionString("EmployeeDBMVC")))
                 {
                     string sqlQuery = "SELECT * FROM tblEmployee WHERE EmployeeID= " + id;
                     SqlCommand cmd = new SqlCommand(sqlQuery, con);
@@ -139,7 +139,7 @@ namespace RepositoryLayer.Service
         {
             try 
             {
-                using (SqlConnection con = new SqlConnection(iconfiguration["EmployeeDBMVC"]))
+                using (SqlConnection con = new SqlConnection(this.iconfiguration.GetConnectionString("EmployeeDBMVC")))
                 {
                     SqlCommand cmd = new SqlCommand("spUpdateEmployee", con);
                     cmd.CommandType = CommandType.StoredProcedure;
@@ -179,7 +179,7 @@ namespace RepositoryLayer.Service
         {
             try
             {
-                using (SqlConnection con = new SqlConnection(iconfiguration["EmployeeDBMVC"]))
+                using (SqlConnection con = new SqlConnection(this.iconfiguration.GetConnectionString("EmployeeDBMVC")))
                 {
                     SqlCommand cmd = new SqlCommand("spDeleteEmployee", con);
                     cmd.CommandType = CommandType.StoredProcedure;
