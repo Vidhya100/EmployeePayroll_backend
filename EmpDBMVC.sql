@@ -73,4 +73,7 @@ Create procedure spDeleteEmployee
 as           
 begin          
    Delete from EmpDetails where EmpID=@EmpID          
-End     
+End   
+
+
+select * from EmpDetails  

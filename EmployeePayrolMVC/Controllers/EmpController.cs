@@ -25,7 +25,7 @@ namespace EmployeePayrolMVC.Controllers
         //For Add new employee
         [HttpGet]
         /*
-           Polymorphism - Methos overloading
+            Methos overloading
            [bind] bind model data with page
             ModelState.IsValid - check value are provided to all fields in model
                             Its by default came with mvc arch.
@@ -48,7 +48,7 @@ namespace EmployeePayrolMVC.Controllers
             return View(employee);
         }
 
-        //For Add new employee
+        //For edit employee data
         [HttpGet]
         //get employee data from get all 
         public IActionResult UpdateEmployee(int? id)
@@ -99,7 +99,7 @@ namespace EmployeePayrolMVC.Controllers
         }
         //For delete employee
         /*
-         Polymorphism - method overriding - same parameter different method name
+         [Action]- conidered post method for delete 
          */
         [HttpGet]
         public IActionResult Delete(int? id)
