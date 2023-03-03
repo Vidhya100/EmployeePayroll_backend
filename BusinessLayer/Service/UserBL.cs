@@ -15,61 +15,27 @@ namespace BusinessLayer.Service
             this.iuserRL = iuserRL;
         }
 
-        public EmpModel AddEmployee(EmpModel empModel)
+        public UserModel UserRegi(UserModel userModel)
         {
             try
             {
-                return iuserRL.AddEmployee(empModel);
+                return iuserRL.UserRegi(userModel);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }
         }
-        public IEnumerable<EmpModel> GetAllEmployees()
+        public UserModel Login(UserModel userModel)
         {
-
             try
             {
-                return iuserRL.GetAllEmployees();
+                return iuserRL.Login(userModel);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
                 throw;
             }
         }
-        public EmpModel GetEmployeeData(int? id)
-        {
-            try
-            {
-                return iuserRL.GetEmployeeData(id);
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-        }
-        public EmpModel UpdateEmployee(EmpModel empModel)
-        {
-            try
-            {
-                return iuserRL.UpdateEmployee(empModel);
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-        }
-        public bool DeleteEmployee(int? id)
-        {
-            try
-            {
-                return iuserRL.DeleteEmployee(id);
-            }
-            catch (Exception ex)
-            {
-                throw;
-            }
-        }
-    }
+     }
 }

@@ -16,3 +16,12 @@
     //align-items:center;
     padding-left:130px;
 }
+inputs {
+    padding-left: 25px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}

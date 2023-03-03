@@ -7,10 +7,7 @@ namespace BusinessLayer.Service
 {
     public interface IUserBL
     {
-        public EmpModel AddEmployee(EmpModel empModel);
-        public IEnumerable<EmpModel> GetAllEmployees();
-        public EmpModel GetEmployeeData(int? id);
-        public EmpModel UpdateEmployee(EmpModel empModel);
-        public bool DeleteEmployee(int? id);
+        public UserModel UserRegi(UserModel userModel);
+        public UserModel Login(UserModel userModel);
     }
 }

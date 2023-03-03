@@ -1,4 +1,6 @@
 ﻿using BusinessLayer.Service;
+using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using ModelLayer.Service;
 using System.Collections.Generic;
@@ -6,21 +8,35 @@ using System.Linq;
 
 namespace EmployeePayrolMVC.Controllers
 {
+   // [Authorize]
+   
     public class EmpController : Controller
     {
-        IUserBL iuserBL;
-
-        public EmpController(IUserBL iuserBL)
+        IEmpBL iuserBL;
+        private readonly IHttpContextAccessor context;
+        public EmpController(IEmpBL iuserBL)
         {
             this.iuserBL = iuserBL;
+
         }
+        
+        //[HttpGet]
         //For Get all employee
         public IActionResult GetAllEmployees()
         {
-            List<EmpModel> lstEmployee = new List<EmpModel>();
-            lstEmployee = iuserBL.GetAllEmployees().ToList();
+            int userid = (int)HttpContext.Session.GetInt32("UserId");
+            if(userid != null)
+            {
+                List<EmpModel> lstEmployee = new List<EmpModel>();
+                lstEmployee = iuserBL.GetAllEmployees().ToList();
 
-            return View(lstEmployee);
+                return View(lstEmployee);
+            }
+            else
+            {
+                return View();
+            }
+            
         }
         //For Add new employee
         [HttpGet]
@@ -67,7 +83,7 @@ namespace EmployeePayrolMVC.Controllers
         }
         //match id and update data
         [HttpPost]
-        public IActionResult UpdateEmployee(int id, [Bind] EmpModel employee)
+        public IActionResult UpdateEmployee(int id, EmpModel employee)
         {
             if (id != employee.EmpID)
             {
@@ -124,5 +140,12 @@ namespace EmployeePayrolMVC.Controllers
             iuserBL.DeleteEmployee(id);
             return RedirectToAction("GetAllEmployees");
         }
+
+        [HttpGet]
+        public IActionResult Function()
+        {
+            return View();
+        }
+
     }
 }

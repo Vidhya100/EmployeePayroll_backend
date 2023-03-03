@@ -1,15 +1,19 @@
 ﻿@model IEnumerable<ModelLayer.Service.EmpModel>
+@using Microsoft.AspNetCore.Http;
 
 @{
     ViewData["Title"] = "GetAllEmployees";
 }
 
-<h1>GetAllEmployees</h1>
+<h1>Employee Details</h1>
 
 <p>
-    <a asp-action="AddEmployee">Add New</a>
+    <a asp-action="AddEmployee" class="btn btn-info text-white">Add New</a>
 </p>
- 
+@*<p>
+     @Context.Session.GetInt32("UserId");
+</p>
+*@
 <table class="table">
     
     <thead>
@@ -51,7 +55,7 @@
                 @Html.DisplayFor(modelItem => item.EmpName)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.ProfileImg)
+                <img src="@Url.Content(item.ProfileImg)"/>
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Gender)
@@ -78,4 +82,3 @@
 }
     </tbody>
 </table>
-

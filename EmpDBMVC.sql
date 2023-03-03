@@ -2,6 +2,42 @@
 create database EmployeeDBMVC
 use EmployeeDBMVC
 
+/*created table and procedures for User*/
+CREATE TABLE UserInfo
+(
+	UserId INT IDENTITY Primary key,
+	Firstname varchar(200) NOT NULL,
+	Lastname varchar(200) NOT NULL,
+	Email varchar(255) NOT NULL,
+	Password varchar(255) NOT NULL,
+);
+
+select * from UserInfo;
+
+create procedure spRegister
+	@Firstname varchar(100),
+	@Lastname varchar(100),
+	@Email varchar(255),
+	@Password varchar(255)
+	
+as
+Begin
+	Insert Into UserInfo values (@Firstname,@Lastname,@Email,@Password);
+End
+
+EXEC spRegister "Vidhya","Darade","vidhya@gmail.com","Vidhya@12";
+
+
+Alter procedure Login
+(
+	@EmailId varchar(255),
+	@Password varchar(255)
+)	
+as
+begin
+	select Email , Password from UserInfo where Email = @EmailId and Password = @Password ;
+End
+
 /* Table creation */
 CREATE TABLE EmpDetails
 (
